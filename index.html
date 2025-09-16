@@ -300,6 +300,92 @@
             filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
         }
 
+        /* ...existing code... */
+
+/* Hero Section - Responsive Mejorado */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.05) 0%, rgba(124, 58, 237, 0.05) 100%);
+    flex-direction: row; /* Por defecto en desktop */
+}
+
+.hero-img {
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    width: 450px;
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+        padding: 80px 0 40px;
+        justify-content: flex-start;
+    }
+    .hero-contenido {
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .hero-img {
+        position: static;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        animation: float 6s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-botones {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .btn, .btn-outline {
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 0 20px;
+    }
+    .hero-img {
+        max-width: 220px;
+    }
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    .hero p {
+        font-size: 0.95rem;
+    }
+    .btn, .btn-outline {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+}
+
+/* ...existing code... */
+
         /* Sobre mí */
         .sobre-mi {
             background: var(--color-tarjeta);
